@@ -2,120 +2,221 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Разработка пользовательского Web-интерфейса на HTML</title>
-    <link rel="styleshhet" href = "css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <header id="site-header">
+        <div class="container">
+            <div class="header-content">
+                <div id="site-logo">Б</div>
+                <h1 id="site-title">Разработка Web-интерфейсов</h1>
+            </div>
+        </div>
+    </header>
+    
+    <nav id="main-nav">
+        <div class="container">
+            <ul id="nav-menu">
+                <li><a href="#">Главная</a></li>
+                <li><a href="#">О проекте</a></li>
+                <li><a href="#form-section">Форма</a></li>
+                <li><a href="#table-section">Таблица</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <main class="container">
+        <section class="content-section">
+            <h2>Cсылки и форма в HTML</h2>
 
-    <h1>Cсылки и форма в HTML</h1>
+            <ul>
+                <li><a href="http://kubsu.ru/">kubsu.ru (абсолютная)</a></li>
 
-    <ul>
-        <li><a href="http://kubsu.ru/">kubsu.ru (абсолютная)</a></li>
+                <li><a href="https://kubsu.ru/">kubsu.ru (https)</a></li>
 
-        <li><a href="https://kubsu.ru/">kubsu.ru (https)</a></li>
+                <img src="images/image.jpg" alt="Цветок" style="width: 600px; max-width: 100%;" />
 
-        <li>
-                <img src="images/image.jpg" alt="Цветок" style="width: 600px;" />
+                <li><a href="/faculty">Внутренняя страница (сокращенная)</a></li>
 
-        </li>
+                <li><a href="/">Главная страница (сокращенная)</a></li>
 
-        <li><a href="/faculty">Внутренняя страница (сокращенная)</a></li>
+                <li><a href="#form-section">Перейти к форме (якорь)</a></li>
 
-        <li><a href="/">Главная страница (сокращенная)</a></li>
+                <li><a href="https://example.com/page?param1=value1&param2=value2&param3=value3">Ссылка с 3 параметрами</a></li>
 
-        <li><a href="#form-section">Перейти к форме (якорь)</a></li>
+                <li><a href="https://example.com/user?id=12345">Ссылка с параметром id</a></li>
 
-        <li><a href="https://example.com/page?param1=value1&param2=value2&param3=value3">Ссылка с 3 параметрами</a></li>
+                <li><a href="page.html">Страница в текущем каталоге</a></li>
 
-        <li><a href="https://example.com/user?id=12345">Ссылка с параметром id</a></li>
+                <li><a href="about/index.html">Страница в каталоге about</a></li>
 
-        <li><a href="page.html">Страница в текущем каталоге</a></li>
+                <li><a href="../parent.html">Страница на уровень выше</a></li>
 
-        <li><a href="about/index.html">Страница в каталоге about</a></li>
+                <li><a href="../../grandparent.html">Страница двумя уровнями выше</a></li>
 
-        <li><a href="../parent.html">Страница на уровень выше</a></li>
+                <li>
+                    <p>Это абзац с <a href="https://kubsu.ru/">контекстной ссылкой</a> внутри текста.</p>
+                </li>
 
-        <li><a href="../../grandparent.html">Страница двумя уровнями выше</a></li>
+                <li><a href="https://ru.wikipedia.org/wiki/HTML#Версии">HTML на Википедии (якорь)</a></li>
 
-        <li>
-            <p>Это абзац с <a href="https://kubsu.ru/">контекстной ссылкой</a> внутри текста.</p>
-        </li>
+                <img src="https://i.pinimg.com/1200x/af/a0/d4/afa0d4b7a9a13ddfcc35d5d7d054537b.jpg" alt="Image Map" usemap="#examplemap" width="300" style="max-width: 100%;">
+                <map name="examplemap">
+                    <area shape="rect" coords="0,0,150,100" href="https://kubsu.ru/" alt="Прямоугольная область">
+                    <area shape="circle" coords="500,500,500" href="https://kubsu.ru/en/" alt="Круглая область">
+                </map>
 
-        <li><a href="https://ru.wikipedia.org/wiki/HTML#Версии">HTML на Википедии (якорь)</a></li>
+                <li><a href="">Ссылка с пустым href</a></li>
 
-        <li>
-            <img src="https://i.pinimg.com/1200x/af/a0/d4/afa0d4b7a9a13ddfcc35d5d7d054537b.jpg" alt="Image Map" usemap="#examplemap" width="300">
-            <map name="examplemap">
-                <area shape="rect" coords="0,0,150,100" href="https://kubsu.ru/" alt="Прямоугольная область">
-                <area shape="circle" coords="500,500,500" href="https://kubsu.ru/en/" alt="Круглая область">
-            </map>
-        </li>
+                <li><a>Ссылка без href (не кликабельна)</a></li>
 
-        <li><a href="">Ссылка с пустым href</a></li>
+                <li><a href="https://kubsu.ru/" rel="nofollow">Ссылка с nofollow</a></li>
 
-        <li><a>Ссылка без href (не кликабельна)</a></li>
+                <li><a href="https://kubsu.ru/" rel="noindex">Ссылка с noindex</a></li>
 
-        <li><a href="https://kubsu.ru/" rel="nofollow">Ссылка с nofollow</a></li>
-
-        <li><a href="https://kubsu.ru/" rel="noindex">Ссылка с noindex</a></li>
-
-        <li>
-            <ol>
                 <li><a href="https://kubsu.ru/" title="Официальный сайт КубГУ">KubSU с title</a></li>
+                        
                 <li><a href="https://kubsu.ru/university" title="Информация об университете">О университете</a></li>
-            </ol>
-        </li>
 
-        <li><a href="ftp://user:password@ftp.example.com/file.txt">FTP с авторизацией</a></li>
-    </ul>
+                <li><a href="ftp://user:password@ftp.example.com/file.txt">FTP с авторизацией</a></li>
+            </ul>
+        </section>
 
-    <h2 id="form-section">Форма для заполнения</h2>
+        <section class="content-section" id="table-section">
+            <h2>Таблица данных (Список товаров)</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Наименование</th>
+                        <th>Категория</th>
+                        <th>Количество</th>
+                        <th>Цена</th>
+                        <th>Статус</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>001</td>
+                        <td>Ноутбук игровой</td>
+                        <td>Электроника</td>
+                        <td>5</td>
+                        <td>75,000 руб.</td>
+                        <td>В наличии</td>
+                    </tr>
+                    <tr>
+                        <td>002</td>
+                        <td>Смартфон</td>
+                        <td>Электроника</td>
+                        <td>12</td>
+                        <td>25,000 руб.</td>
+                        <td>В наличии</td>
+                    </tr>
+                    <tr>
+                        <td>003</td>
+                        <td>Наушники беспроводные</td>
+                        <td>Аксессуары</td>
+                        <td>8</td>
+                        <td>7,500 руб.</td>
+                        <td class="merged-cell" colspan="2">Ожидается поставка</td>
+                    </tr>
+                    <tr>
+                        <td>004</td>
+                        <td>Клавиатура механическая</td>
+                        <td>Периферия</td>
+                        <td>15</td>
+                        <td>5,200 руб.</td>
+                        <td>В наличии</td>
+                    </tr>
+                    <tr>
+                        <td>005</td>
+                        <td>Монитор 27"</td>
+                        <td>Электроника</td>
+                        <td>3</td>
+                        <td>18,000 руб.</td>
+                        <td>В наличии</td>
+                    </tr>
+                    <tr>
+                        <td>006</td>
+                        <td>Мышь игровая</td>
+                        <td>Периферия</td>
+                        <td>20</td>
+                        <td>3,500 руб.</td>
+                        <td>В наличии</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
 
-    <form action="/submit" method="POST">
-        
-        <label for="fio">ФИО:</label><br>
-        <input type="text" id="fio" name="fio" required><br><br>
+        <section class="content-section" id="form-section">
+            <h2>Форма для заполнения</h2>
 
-        <label for="phone">Телефон:</label><br>
-        <input type="tel" id="phone" name="phone" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="+7 (999) 999-99-99" required><br><br>
+            <form action="/submit" method="POST">
+                
+                <label for="fio">ФИО:</label>
+                <input type="text" id="fio" name="fio" required>
 
-        <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
+                <label for="phone">Телефон:</label>
+                <input type="tel" id="phone" name="phone" pattern="[\+]\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" placeholder="+7 (999) 999-99-99" required>
 
-        <label for="birthdate">Дата рождения:</label><br>
-        <input type="date" id="birthdate" name="birthdate" required><br><br>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
 
-        <label>Пол:</label><br>
-        <input type="radio" id="male" name="gender" value="male" required>
-        <label for="male">Мужской</label><br>
-        <input type="radio" id="female" name="gender" value="female">
-        <label for="female">Женский</label><br><br>
+                <label for="birthdate">Дата рождения:</label>
+                <input type="date" id="birthdate" name="birthdate" required>
 
-        <label for="languages">Любимый язык программирования:</label><br>
-        <select id="languages" name="languages" multiple size="5">
-            <option value="pascal">Pascal</option>
-            <option value="c">C</option>
-            <option value="cpp">C++</option>
-            <option value="javascript">JavaScript</option>
-            <option value="php">PHP</option>
-            <option value="python">Python</option>
-            <option value="java">Java</option>
-            <option value="haskel">Haskel</option>
-            <option value="clojure">Clojure</option>
-            <option value="prolog">Prolog</option>
-            <option value="scala">Scala</option>
-        </select>
-        <small>(Для множественного выбора зажмите Ctrl/Cmd)</small><br><br>
+                <label>Пол:</label>
+        <div class="radio-group">
+            <div class="radio-option">
+                <input type="radio" id="male" name="gender" value="male" required>
+                <label for="male">Мужской</label>
+            </div>
+            <div class="radio-option">
+                <input type="radio" id="female" name="gender" value="female">
+                <label for="female">Женский</label>
+            </div>
+        </div>
 
-        <label for="bio">Биография:</label><br>
-        <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Расскажите о себе..."></textarea><br><br>
+                <label for="languages">Любимый язык программирования:</label>
+                <select id="languages" name="languages" multiple size="5">
+                    <option value="pascal">Pascal</option>
+                    <option value="c">C</option>
+                    <option value="cpp">C++</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="php">PHP</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                    <option value="haskel">Haskel</option>
+                    <option value="clojure">Clojure</option>
+                    <option value="prolog">Prolog</option>
+                    <option value="scala">Scala</option>
+                </select>
+                <small>(Для множественного выбора зажмите Ctrl/Cmd)</small>
 
-        <input type="checkbox" id="contract" name="contract" required>
-        <label for="contract">С контрактом ознакомлен(а)</label><br><br>
+                <label for="bio">Биография:</label>
+                <textarea id="bio" name="bio" rows="4" placeholder="Расскажите о себе..."></textarea>
 
-        <button type="submit">Сохранить</button>
-        
-    </form>
+                <div>
+                    <input type="checkbox" id="contract" name="contract" required>
+                    <label for="contract" style="display: inline;">С контрактом ознакомлен(а)</label>
+                </div>
 
+                <button type="submit">Сохранить</button>
+                
+            </form>
+        </section>
+    </main>
+    
+    <footer id="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 Разработка пользовательского Web-интерфейса на HTML. Все права защищены.</p>
+                <p>Контактная информация: oleg.basov.9203@gmail.com | +7 (978) 074-54-69</p>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
